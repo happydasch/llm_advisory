@@ -20,7 +20,7 @@ By dividing the work, you:
 
 Projects using `LLM Advisory`:
 
-- `BT LLM Advisory` - A backtrader trading strategy advisory, which generates trade advises. Multiple advisors are available which generate data from a running strategy.
+- [Backtrader LLM Advisory](https://github.com/happydasch/bt_llm_advisory) - A backtrader trading strategy advisory, which generates trade advises. Multiple advisors are available which generate data from a running strategy.
 
 ## Quickstart
 
