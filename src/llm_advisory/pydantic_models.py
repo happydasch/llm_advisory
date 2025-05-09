@@ -98,7 +98,7 @@ class LLMAdvisorSignal(BaseModel):
     )
     reasoning: str = Field(
         default="No reasoning generated",
-        description="Reasoning about theis signal",
+        description="Reasoning about this signal",
     )
 
 
