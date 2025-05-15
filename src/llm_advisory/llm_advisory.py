@@ -12,7 +12,7 @@ from llm_advisory.llm_model_provider import LLMModelProvider
 from llm_advisory.state_advisors import AdvisoryAdvisor
 
 
-DEFAULT_PROMPT = "Make an advise based on the provided data:\n"
+DEFAULT_PROMPT = "Make an advice based on the provided data:\n"
 
 
 class LLMAdvisory:
@@ -61,7 +61,7 @@ class LLMAdvisory:
         initial_message = message
         if initial_message == "":
             initial_message = self.advisor_prompt
-        graph = self._create_workflow_for_advise()
+        graph = self._create_workflow_for_advice()
         input_state = self.advisory_state_pydantic_model(
             messages=[
                 HumanMessage(content=initial_message, name=self.__class__.__name__)
@@ -74,12 +74,12 @@ class LLMAdvisory:
         )
         state = self.advisory_state_pydantic_model(**state_dict)
         if self.advisory_advisor.advisor_name in state.signals:
-            advise = state.signals[self.advisory_advisor.advisor_name]
+            advice = state.signals[self.advisory_advisor.advisor_name]
         else:
-            advise = self.advisory_advisor.signal_model_type()
-        return self.advisory_response_pydantic_model(state=state, advise=advise)
+            advice = self.advisory_advisor.signal_model_type()
+        return self.advisory_response_pydantic_model(state=state, advice=advice)
 
-    def _create_workflow_for_advise(self) -> CompiledStateGraph:
+    def _create_workflow_for_advice(self) -> CompiledStateGraph:
         graph = StateGraph(self.advisory_state_pydantic_model)
         graph.add_node("entry_node", lambda _: {}).set_entry_point("entry_node")
         graph.add_node(

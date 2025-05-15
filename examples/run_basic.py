@@ -51,4 +51,4 @@ for advisor_name, signal in advisory_response.state.signals.items():
         "\n"
     )
 
-print("-" * 80, "\n", advisory_response.advise, "\n", "-" * 80, "\n\n")
+print("-" * 80, "\n", advisory_response.advice, "\n", "-" * 80, "\n\n")

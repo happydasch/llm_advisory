@@ -1,7 +1,7 @@
 from llm_advisory.llm_advisor import LLMAdvisor
 from llm_advisory.pydantic_models import (
     LLMAdvisorDataArtefact,
-    LLMAdvisorAdvise,
+    LLMAdvisorAdvice,
     LLMAdvisorState,
     LLMAdvisorUpdateStateData,
 )
@@ -9,13 +9,13 @@ from llm_advisory.helper.llm_prompt import compile_data_artefacts
 
 
 ADVISOR_INSTRUCTIONS = "You are the last advisor who creates an advice based on the signals of other advisors."
-ADVISOR_PROMPT = "Create your advise based on the signals below:"
+ADVISOR_PROMPT = "Create your advice based on the signals below:"
 
 
 class AdvisoryAdvisor(LLMAdvisor):
     """State advisor for advisory"""
 
-    signal_model_type = LLMAdvisorAdvise
+    signal_model_type = LLMAdvisorAdvice
     advisor_instructions = ADVISOR_INSTRUCTIONS
     advisor_prompt = ADVISOR_PROMPT
 

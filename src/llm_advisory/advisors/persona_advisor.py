@@ -5,7 +5,7 @@ ADVISOR_INSTRUCTIONS = """
 You are a advisor and provide advice based on the provided data.
 
 Your advisory needs to include specialized knowledge, which you will also take into account
-when creating the advise. You create the advise from the perspective of this personality:
+when creating the advice. You create the advice from the perspective of this personality:
 
 {name}: {personality}"""
 

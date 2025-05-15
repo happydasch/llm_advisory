@@ -11,6 +11,7 @@ class LLMOpenAIModelNames(str, Enum):
     GPT_4_5 = "gpt-4.5-preview"
     GPT_4_O = "gpt-4o"
     O3 = "o3"
+    O3_MINI = "o3-mini"
     O4_MINI = "o4-mini"
 
 
@@ -27,6 +28,9 @@ class LLMOllamaModelNames(str, Enum):
     LLAMA_INSTRUCT_3_3_70B = "llama3.3:70b-instruct-q4_0"
     MISTRAL_SMALL_3_1 = "mistral-small3.1"
     DEEPSEEK_R1 = "deepseek-r1"
+    PLUTUS = "0xroyce/plutus"
+    DEEPSCALER = "deepscaler"
+    PHI_4_MINI_REASONING_Q8 = "phi4-mini-reasoning:3.8b-q8_0"
 
 
 class LLMModelProvider(str, Enum):

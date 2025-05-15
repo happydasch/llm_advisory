@@ -102,22 +102,22 @@ class LLMAdvisorSignal(BaseModel):
     )
 
 
-class LLMAdvisorAdvise(LLMAdvisorSignal):
-    """Advise signal"""
+class LLMAdvisorAdvice(LLMAdvisorSignal):
+    """Advice signal"""
 
     signal: Literal["negative", "positive", "neutral"] = Field(
         default="none",
-        description="Advise signal based on advisors signals",
+        description="Advice signal based on advisors signals",
     )
     confidence: float = Field(
         default=0.0,
         ge=0.0,
         le=1.0,
-        description="Confidence level about this advise",
+        description="Confidence level about this advice",
     )
     reasoning: str = Field(
-        default="No advise reasoning generated",
-        description="Reasoning about the advise",
+        default="No advice reasoning generated",
+        description="Reasoning about the advice",
     )
 
 
@@ -145,4 +145,4 @@ class LLMAdvisoryResponse(BaseModel):
     """Advisory response"""
 
     state: LLMAdvisorState
-    advise: LLMAdvisorAdvise
+    advice: LLMAdvisorAdvice
