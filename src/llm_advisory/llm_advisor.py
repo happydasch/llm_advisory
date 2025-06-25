@@ -66,7 +66,7 @@ class LLMAdvisor:
         """Default callback method for invoke"""
         self.advisor_messages_input.advisor_prompt = state.messages[0].content
         self.advisor_messages_input.advisor_data = compile_data_artefacts(state.data)
-        self._update_state(state=state)
+        return self._update_state(state=state)
 
     def _update_state(
         self, state: LLMAdvisorUpdateStateData
@@ -132,7 +132,7 @@ class LLMAdvisor:
         except ValueError as e:
             logger.error("Error generating signal: %s", e)
             signal = pydantic_model(
-                advise="none",
+                signal="none",
                 confidence=0,
                 reasoning=f"Error generating: {e}",
             )

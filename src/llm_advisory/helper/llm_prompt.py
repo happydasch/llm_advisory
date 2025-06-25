@@ -120,7 +120,7 @@ def generate_description_from_pydantic_model(model: type[BaseModel]) -> str:
         field_info = {meta.__class__.__name__.lower(): meta for meta in field.metadata}
 
         if get_origin(annotation) is Literal:
-            allowed = "/".join(map(str, get_args(annotation)))
+            allowed = " / ".join(map(str, get_args(annotation)))
             field_type = f'"{allowed}"'
         elif annotation == int:
             field_type = "integer"

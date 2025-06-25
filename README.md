@@ -20,7 +20,7 @@ By dividing the work, you:
 
 Projects using `LLM Advisory`:
 
-- [Backtrader LLM Advisory](https://github.com/happydasch/bt_llm_advisory) - A backtrader trading strategy advisory, which generates trade advises. Multiple advisors are available which generate data from a running strategy.
+- [Backtrader LLM Advisory](https://github.com/happydasch/bt_llm_advisory) - A backtrader trading strategy advisory, which generates trade advices. Multiple advisors are available which generate data from a running strategy.
 
 ## Quickstart
 
@@ -39,7 +39,7 @@ llm_advisory = LLMAdvisory(
 )
 ```
 
-Ask the advisory for a advise:
+Ask the advisory for a advice:
 
 ```python
 
@@ -54,13 +54,13 @@ advisory_response = llm_advisory.get_advisory(
 )
 ```
 
-Processing the advise:
+Processing the advice:
 
 ```python
 print(
-    advisory_response.advise.signal,
-    advisory_response.advise.confidence,
-    advisory_response.advise.reasoning,
+    advisory_response.advice.signal,
+    advisory_response.advice.confidence,
+    advisory_response.advice.reasoning,
 )
 ```
 
@@ -77,7 +77,7 @@ print(
 
 TODO add text how to create a basic advisory object
 
-- Provide a advise from advisors based on provided data (moral)
+- Provide a advice from advisors based on provided data (moral)
 - Create a advisor based on a famous trading Persona or a fictional Persona with a custom Persona description ()
 
 ## Frequently Asked Questions
@@ -93,4 +93,4 @@ A list with possible future functions.
 - Fetch additional data from provided sources, per advisor
 - compile experience into memory for self improvement
 - add observer for advisors to overwatch their behaviour
-- add feedback for advises from trading so they can learn
+- add feedback for advices from trading so they can learn
