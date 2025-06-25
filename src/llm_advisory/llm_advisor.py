@@ -132,7 +132,7 @@ class LLMAdvisor:
         except ValueError as e:
             logger.error("Error generating signal: %s", e)
             signal = pydantic_model(
-                advice="none",
+                signal="none",
                 confidence=0,
                 reasoning=f"Error generating: {e}",
             )

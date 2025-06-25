@@ -86,7 +86,7 @@ class LLMAdvisorMessagesInput(BaseModel):
 class LLMAdvisorSignal(BaseModel):
     """Default advisor signal"""
 
-    signal: Literal["positive", "negative", "neutral"] = Field(
+    signal: Literal["positive", "negative", "neutral", "none"] = Field(
         default="none",
         description="Signal from the advisor",
     )
@@ -105,7 +105,7 @@ class LLMAdvisorSignal(BaseModel):
 class LLMAdvisorAdvice(LLMAdvisorSignal):
     """Advice signal"""
 
-    signal: Literal["negative", "positive", "neutral"] = Field(
+    signal: Literal["negative", "positive", "neutral", "none"] = Field(
         default="none",
         description="Advice signal based on advisors signals",
     )

@@ -22,7 +22,6 @@ class LLMAdvisory:
         self,
         advisors: list[LLMAdvisor],
         model_provider_name: str,
-        model_name: str,
         model_config: dict[str, str] | None = None,
         advisors_before: list[LLMAdvisor] | None = None,
         advisors_after: list[LLMAdvisor] | None = None,
@@ -50,7 +49,7 @@ class LLMAdvisory:
         )
         self.advisor_prompt: str = DEFAULT_PROMPT
         self.metadata: dict = {
-            "llm": self.model_provider.get_llm_model(model_name, model_config or {})
+            "llm": self.model_provider.get_llm_model(model_config or {})
         }
         self.max_concurrency: int | None = max_concurrency
 
